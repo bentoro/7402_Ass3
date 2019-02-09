@@ -41,13 +41,44 @@ def main (argv):
 
     outfile = str(parser.parse_args().output)
 
-    xorfile(content, outfile)
+    xormessage(content, outfile)
 
+#
+# =====================================================================================
+#
+#       Function:  generaterandom()
+#
+#     Parameters: void
+#
+#    Description: Generate random key
+#
+#        Created:  02/8/2019
+#
+#         Author:  Benedict Lo
+#
+# =====================================================================================
 
 def generaterandom():
     return int(random.random()*255.0)
 
-def xorfile(content, outfile):
+
+#
+# =====================================================================================
+#
+#       Function:  xormessage()
+#
+#     Parameters: void
+#
+#    Description: XOR the provided message
+#
+#        Created:  02/8/2019
+#
+#         Author:  Benedict Lo
+#
+# =====================================================================================
+
+
+def xormessage(content, outfile):
     key = generaterandom()
     fileout = open(outfile, 'w')
 
